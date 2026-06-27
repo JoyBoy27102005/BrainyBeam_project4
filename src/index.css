@@ -1,0 +1,265 @@
+/* =====================================================
+   GLOBAL LAYOUT
+===================================================== */
+
+:root{
+  --sidebar-width:240px;
+}
+
+html,
+body,
+#root,
+.app-root{
+  min-height:100%;
+  background:var(--bg);
+  color:var(--text);
+}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:
+    background .3s ease,
+    color .3s ease;
+}
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard-page{
+  min-height:100vh;
+  background:var(--bg);
+}
+
+.dashboard-container{
+  display:flex;
+  width:100%;
+  min-height:calc(100vh - 64px);
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar{
+  width:var(--sidebar-width);
+
+  background:var(--surface);
+
+  border-right:1px solid var(--border);
+
+  transition:
+    left .30s ease,
+    background .30s ease;
+
+  box-shadow:4px 0 24px rgba(0,0,0,.08);
+}
+
+.bb-sidebar{
+
+  height:100%;
+
+}
+
+.bb-sidebar .nav-item{
+
+  margin-bottom:.35rem;
+
+}
+
+.bb-sidebar .nav-link{
+
+  display:flex;
+
+  align-items:center;
+
+  border-radius:12px;
+
+  padding:.8rem 1rem;
+
+  color:var(--text);
+
+  font-weight:500;
+
+  transition:
+      background .22s ease,
+      color .22s ease,
+      padding-left .22s ease;
+}
+
+.bb-sidebar .nav-link:hover{
+
+  background:rgba(79,140,255,.12);
+
+  color:var(--primary);
+
+  padding-left:18px;
+
+}
+
+.bb-sidebar .nav-link.active{
+
+  background:rgba(79,140,255,.16);
+
+  color:var(--primary)!important;
+
+  font-weight:600;
+
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content-area{
+
+  flex:1;
+
+  padding:2rem;
+
+  background:var(--bg);
+
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.bb-navbar{
+
+  border-bottom:1px solid var(--border);
+
+  backdrop-filter:blur(10px);
+
+  -webkit-backdrop-filter:blur(10px);
+
+  box-shadow:0 4px 20px rgba(0,0,0,.05);
+
+}
+
+.navbar-nav .nav-link{
+
+  font-weight:500;
+
+  transition:color .2s ease;
+
+}
+
+.navbar-nav .nav-link:hover{
+
+  color:var(--primary)!important;
+
+}
+
+.navbar-nav .nav-link.active{
+
+  color:var(--primary)!important;
+
+}
+
+/* =====================================================
+   DASHBOARD CARDS
+===================================================== */
+
+.bb-stat-card{
+
+  min-height:150px;
+
+  transition:
+      transform .25s ease,
+      box-shadow .25s ease;
+
+}
+
+.bb-stat-card:hover{
+
+  transform:translateY(-4px);
+
+}
+
+.stat-icon{
+
+  font-size:2rem;
+
+}
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.bb-topbar-search{
+
+  max-width:240px;
+
+}
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand-logo{
+
+  height:34px;
+
+}
+
+.avatar-img{
+
+  width:110px;
+
+  height:110px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  border:4px solid rgba(79,140,255,.15);
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:768px){
+
+.sidebar{
+
+  position:fixed;
+
+  left:-270px;
+
+  top:0;
+
+  width:min(100%,270px);
+
+  height:100%;
+
+  z-index:1040;
+
+}
+
+.sidebar.show{
+
+  left:0;
+
+}
+
+.content-area{
+
+  padding:1.25rem;
+
+  padding-top:90px;
+
+}
+
+.bb-topbar-search{
+
+  max-width:100%;
+
+}
+
+}

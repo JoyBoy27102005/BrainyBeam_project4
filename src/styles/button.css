@@ -1,0 +1,112 @@
+.bb-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.75rem 1.35rem;
+
+  border: none;
+  border-radius: 14px;
+
+  background: var(--primary);
+  color: var(--button-text);
+
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    background .22s ease,
+    opacity .22s ease;
+}
+
+/* Hover */
+
+.bb-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(79,140,255,.28);
+}
+
+/* Click */
+
+.bb-button:active:not(:disabled) {
+  transform: scale(.97);
+}
+
+/* Keyboard */
+
+.bb-button:focus-visible {
+  outline: none;
+
+  box-shadow:
+      0 0 0 4px var(--focus-ring),
+      0 10px 22px rgba(79,140,255,.28);
+}
+
+/* Disabled */
+
+.bb-button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Secondary */
+
+.bb-button-secondary {
+  background: var(--secondary);
+  color: var(--button-text);
+}
+
+/* Success */
+
+.bb-button-success {
+  background: var(--success);
+  color: var(--button-text);
+}
+
+/* Danger */
+
+.bb-button-danger {
+  background: var(--danger);
+  color: var(--button-text);
+}
+
+/* Outline */
+
+.bb-button-outline {
+
+  background: transparent;
+
+  color: var(--text);
+
+  border: 1px solid var(--border);
+
+  box-shadow: none;
+}
+
+.bb-button-outline:hover:not(:disabled){
+
+  background: var(--surface);
+
+  color: var(--primary);
+
+  border-color: var(--primary);
+
+}
+
+/* Theme Toggle */
+
+.bb-theme-toggle{
+  min-width:130px;
+}

@@ -1,0 +1,81 @@
+/* =====================================================
+   PREMIUM CARD SYSTEM
+===================================================== */
+
+.bb-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow-soft);
+
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    border-color .28s ease;
+}
+
+.bb-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: var(--shadow-hover);
+
+  border-color: rgba(79, 140, 255, 0.25);
+}
+
+.bb-card-header {
+  padding: 1.25rem 1.5rem;
+
+  background: var(--surface);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.bb-card-header h3 {
+  margin: 0;
+
+  font-size: 1.15rem;
+
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+.bb-card-body {
+  padding: 1.6rem;
+}
+
+.bb-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Smooth content spacing */
+
+.bb-card-body>*+* {
+  margin-top: 1rem;
+}
+
+/* Mobile */
+
+@media (max-width:768px) {
+
+  .bb-card {
+    border-radius: 16px;
+  }
+
+  .bb-card-header {
+
+    padding: 1rem 1.25rem;
+
+  }
+
+  .bb-card-body {
+
+    padding: 1.25rem;
+
+  }
+
+}

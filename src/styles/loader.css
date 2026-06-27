@@ -1,0 +1,19 @@
+.bb-loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.bb-loader {
+  width: 3rem;
+  height: 3rem;
+  border: 0.45rem solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: bb-spin 0.8s linear infinite;
+}
+
+@keyframes bb-spin {
+  to { transform: rotate(360deg); }
+}
